@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1b1725">
+    <title>Ditter: Treasure Match</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="game__header">
+        <p class="eyebrow">Royal Academy · Training Grounds</p>
+        <h1>Ditter</h1>
+        <p class="game__intro">Treasure-Stealing Match · Guide two apprentice knights to the summoned feybeast.</p>
+      </header>
+
+      <section class="game__panel" aria-label="Ditter Board game">
+        <div class="game__toolbar">
+          <p id="game-status" class="game__status" role="status" aria-live="polite">
+            Select a knight, then move one tile up, down, left, or right to the marked treasure.
+          </p>
+          <button id="reset-button" class="reset-button" type="button">Reset match</button>
+        </div>
+
+        <div id="board" class="board" role="grid" aria-label="7 by 7 Ditter arena"></div>
+
+        <div class="game__legend" aria-label="Board legend">
+          <span><span class="legend-piece legend-piece--one" aria-hidden="true">I</span> Knight I</span>
+          <span><span class="legend-piece legend-piece--two" aria-hidden="true">II</span> Knight II</span>
+          <span><span class="legend-target" aria-hidden="true">◆</span> Feybeast treasure</span>
+        </div>
+        <p id="move-count" class="move-count">Moves: 0</p>
+      </section>
+    </main>
+  </body>
+</html>
